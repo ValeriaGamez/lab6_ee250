@@ -34,7 +34,7 @@ while True:
         setText_norefresh(str(threshold) + "\n" + str(distance))
     else:
        setRGB(255, 0, 0)
-       setText_norefresh(str(threshold) + " cm OBJ PRES\n" + str(distance))
+       setText_norefresh(str(threshold) + "cm OBJ PRES" + "\n" + str(distance))
        
     
    
