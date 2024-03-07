@@ -34,7 +34,7 @@ while True:
         setText_norefresh(str(threshold))
     else:
        setRGB(255, 0, 0)
-       setText_norefresh(str(threshold), "OBJ PRES")
+       setText_norefresh(str(threshold) + "OBJ PRES")
        
     
     setText_norefresh(str(distance))
