@@ -31,13 +31,13 @@ while True:
 
     if distance > threshold:
         setRGB(0, 255, 0)
-        setText_norefresh(str(threshold))
+        setText_norefresh(str(threshold) + "\n" + str(distance))
     else:
        setRGB(255, 0, 0)
-       setText_norefresh(str(threshold) + "OBJ PRES")
+       setText_norefresh(str(threshold) + " cm OBJ PRES\n" + str(distance))
        
     
-    setText_norefresh("\n" + str(distance))
+   
     
 
 
