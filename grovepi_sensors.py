@@ -22,7 +22,7 @@ while True:
 
     # TODO: read threshold from potentiometer
     threshold = grovepi.analogRead(potentiometer)
-    setText_norefresh(threshold)
+    setText_norefresh(str(threshold))
     # print(threshold)
     # print(distance)
     
