@@ -13,6 +13,8 @@ grovepi.pinMode(potentiometer,"INPUT")
 # clear lcd screen  before starting main loop
 setText("")
 
+lcd = Grove_LCD()
+
 while True:
     try:
         # Read distance value from Ultrasonic Ranger
@@ -32,7 +34,7 @@ while True:
 
         # Print bottom line with current ultrasonic ranger output
         setRGB(0, 0, 255)  # Set text color to blue
-        setCursor(1, 0)  # Move cursor to the beginning of the second line
+        lcd.setCursor(1, 0)  # Move cursor to the beginning of the second line
         setText_norefresh("{:.2f}".format(distance))
 
         # Wait for a while before updating the LCD again
