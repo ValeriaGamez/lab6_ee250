@@ -22,15 +22,22 @@ while True:
 
     # TODO: read threshold from potentiometer
     threshold = grovepi.analogRead(potentiometer)
-    setText_norefresh(str(threshold))
+    
     # print(threshold)
     # print(distance)
     
     # TODO: format LCD text according to threshhold
     # setText_norefresh(threshold)
 
-    # if distance < threshold:
-    #   setText(threshold, "cm OBJ PRES")
+    if distance > threshold:
+        setRGB(0, 255, 0)
+        setText_norefresh(str(threshold))
+    else:
+       setRGB(255, 0, 0)
+       setText_norefresh(str(threshold), "OBJ PRES")
+       
+    
+    setText_norefresh(str(distance))
     
 
 
